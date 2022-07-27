@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -31,8 +31,15 @@
     <div class="container">
 
       <!-- Timeblocks go here -->
+      <!-- Referencing grid system columns as a whole take up the full width(12) but distributed them between HOUR DIV(1) TEXTAREA(10) & BUTTON(1) -->
         <div id="hour-9" class="row time-block">
             <div class="col-md-1 hour">9 AM</div>
+            <textarea class="col-md-10 description"></textarea>
+            <button class="col-md-1 btn saveBtn"><i class="fas fa-save"></i></button>
+        </div>
+
+        <div id="hour-10" class="row time-block">
+            <div class="col-md-1 hour">10 AM</div>
             <textarea class="col-md-10 description"></textarea>
             <button class="col-md-1 btn saveBtn"><i class="fas fa-save"></i></button>
         </div>
