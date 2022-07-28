@@ -1,5 +1,6 @@
 # workday-planner
 ## Mock Up
+![mockup](./assets/images/mockup.jpg)
 
 ## Objective
 I am creating a work day (9-5) planner to help users stay organized! 
@@ -37,3 +38,4 @@ https://natesoum.github.io/workday-planner/
 
 https://api.jquery.com/
 https://getbootstrap.com/docs/4.3/getting-started/introduction/
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
