@@ -16,11 +16,13 @@ $(document).ready(function(){
         }
         else { // Saves both time and plans in local storage
             localStorage.setItem(time, plans);
+            var approved = $("#stored");
+            approved.removeClass("d-none");
         }
     })
 });
 
-// Targets the description value for each hour if 
+// Targets the description value for each hour
 $("#hour9 .description").val(localStorage.getItem("hour9"));
 $("#hour10 .description").val(localStorage.getItem("hour10"));
 $("#hour11 .description").val(localStorage.getItem("hour11"));
