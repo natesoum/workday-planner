@@ -9,11 +9,27 @@ $(document).ready(function(){
         // Grabs the parent of saveBtn attribute to save the hour 
         var time = $(this).parent().attr("id");
         // Grabs the siblings of saveBtn with the description class value to save plans
-        var plans = $(this).siblings(".description").val();
-        // Saves both time and plans in local storage
-        localStorage.setItem(time, plans);
+        var plans = $(this).siblings(".description").val().trim();
+        // If user leaves text are blank, they will be alerted
+        if (plans === ""){
+            alert("You must type in the text area, please don't leave it blank. ");
+        }
+        else { // Saves both time and plans in local storage
+            localStorage.setItem(time, plans);
+        }
     })
 });
+
+// Targets the description value for each hour if 
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour10 .description").val(localStorage.getItem("hour10"));
+$("#hour11 .description").val(localStorage.getItem("hour11"));
+$("#hour12 .description").val(localStorage.getItem("hour12"));
+$("#hour13 .description").val(localStorage.getItem("hour13"));
+$("#hour14 .description").val(localStorage.getItem("hour14"));
+$("#hour15 .description").val(localStorage.getItem("hour15"));
+$("#hour16 .description").val(localStorage.getItem("hour16"));
+$("#hour17 .description").val(localStorage.getItem("hour17"));
 
 function hourTracker() {
     // Grabs current hours & stores in variable
