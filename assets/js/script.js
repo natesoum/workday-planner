@@ -3,6 +3,18 @@ var todaysDate = moment().format("[Today is : ]dddd, MM/DD/YYYY");
 // Targets ID currentDay and inputs the current Date
 $("#currentDay").text(todaysDate);
 
+$(document).ready(function(){
+    // Listens for click on save button
+    $(".saveBtn").on("click", function(){
+        // Grabs the parent of saveBtn attribute to save the hour 
+        var time = $(this).parent().attr("id");
+        // Grabs the siblings of saveBtn with the description class value to save plans
+        var plans = $(this).siblings(".description").val();
+        // Saves both time and plans in local storage
+        localStorage.setItem(time, plans);
+    })
+});
+
 function hourTracker() {
     // Grabs current hours & stores in variable
     var currentHour = moment().hour();
