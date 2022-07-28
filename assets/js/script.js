@@ -61,5 +61,6 @@ function hourTracker() {
     });
 };
 
+// Calls hourTracker function
 hourTracker();
 
